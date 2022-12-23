@@ -1,9 +1,0 @@
-type Query {
-    getUsers: [User]
-    getCurrentUser: User @hasRoles(roles: [
-        user
-        admin
-    ])
-    getProducts(filter: FilterProductList):ProductListRes @hasRoles(roles: [admin user anonymous])
-    getCategory: [Category] @hasRoles(roles: [user admin anonymous])
-}
